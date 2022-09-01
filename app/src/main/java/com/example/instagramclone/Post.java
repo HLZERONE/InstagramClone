@@ -31,4 +31,8 @@ public class Post extends ParseObject {
     public void setImage(ParseFile file){
         put(KEY_IMAGE, file);
     }
+
+    public String getFormattedTimestamp(){
+        return TimeFormatter.getTimeDifference(getCreatedAt().toString());
+    }
 }
